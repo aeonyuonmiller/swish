@@ -1,0 +1,67 @@
+.container {
+    background-color: #2d2d2d;
+    color: #a0a0a0;
+}
+
+.scroll-message {
+    display: flex;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.carousel-section {
+    position: relative;
+    height: 300vh;
+    background-color: #1a1a1a;
+}
+
+.carousel-container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 16px;
+}
+
+.card {
+    position: relative;
+    height: 450px;
+    width: 450px;
+    overflow: hidden;
+    background-color: #d1d1d1;
+}
+
+.card-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card-text {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 32px;
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    backdrop-filter: blur(10px);
+}
