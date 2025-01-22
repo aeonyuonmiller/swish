@@ -36,6 +36,8 @@ export default function Home() {
       </Transition>
 
       <HorizonSlider />
+      <HorizonSlider />
+      <HorizonSlider />
 
       <Transition>
         <div>

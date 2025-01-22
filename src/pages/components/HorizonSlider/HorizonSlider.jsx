@@ -11,7 +11,7 @@ const HorizonSlider = () => {
         offset: ['start 50vh', 'end -70vh']
     });
 
-    const x = useTransform(scrollYProgress, [0, .2, 1], ["2%", "-10%", "-90%"]);
+    const x = useTransform(scrollYProgress, [0, .2, .75, .95], ["2%", "2.5%", "-80%", "-90%"]);
 
     return (
         <section ref={targetRef} className="carousel-section">
@@ -28,7 +28,13 @@ const HorizonSlider = () => {
 
 const Card = ({ card }) => {
     return (
-        <motion.div initial={{ scale: 0.8, y: "100%" }} whileInView={{ scale: 1, y: 0, transition: { duration: .3, bounce: .2 } }} key={card.id} className="card">
+        <motion.div
+            initial={{ scale: 0.8, y: "100%" }}
+            whileInView={{ scale: 1, y: 0, transition: { duration: .3, bounce: .2 } }}
+            // viewport={{ once: true, amount: 0.02, rootMargin: "-50px" }}
+            viewport={{ once: false, rootMargin: "-50px" }}
+            key={card.id}
+            className="card">
             <motion.div
                 className="card-image"
                 style={{
@@ -36,7 +42,7 @@ const Card = ({ card }) => {
                 }}
             ></motion.div>
             <div className="card-text">
-                <p>{card.title}</p>
+                <p className="title">{card.title}</p>
             </div>
         </motion.div>
     );

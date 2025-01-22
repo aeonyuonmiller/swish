@@ -195,7 +195,6 @@ section.slide {
 }
 
 .carousel-container {
-  position: sticky;
   top: 0;
   display: flex;
   height: 100vh;
@@ -204,16 +203,18 @@ section.slide {
 }
 
 .carousel {
+  position: sticky;
   display: flex;
-  gap: 8vw;
+  gap: 4vw;
+  padding: 0 25vw;
   transform: rotate(12deg);
 }
 
 .card {
   position: relative;
   /* height: 450px; */
-  width: 60vh;
-  max-width: 800px;
+  width: 41vw;
+  /* max-width: 50vw; */
   min-width: 500px;
   aspect-ratio: 16/9;
   overflow: hidden;
@@ -236,14 +237,18 @@ section.slide {
   position: absolute;
   inset: 0;
   display: grid;
-  place-content: center;
+  place-content: end center;
   background: rgba(255, 255, 255, 0.2);
   padding: 32px;
-  font-size: 48px;
+  font-size: 100px;
   font-weight: bold;
   text-transform: uppercase;
-  color: white;
+  color: whitesmoke;
   backdrop-filter: blur(10px);
+}
+
+.title {
+  font-size: 100px;
 }
 
 button {
@@ -254,6 +259,15 @@ button {
   text-decoration: none;
   font-weight: 800;
   border: 0;
+}
+
+footer {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 90vh;
+  background: var(--foreground);
+  color: var(--background);
 }
 
 .transition-container {
