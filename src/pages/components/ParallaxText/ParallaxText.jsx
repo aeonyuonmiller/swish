@@ -1,5 +1,6 @@
 'use client'
-import './ParallaxText.css';
+// import './ParallaxText.css';
+import styles from './ParallaxText.module.css'
 import { useScroll, useTransform, motion } from 'motion/react';
 // import Image from 'next/image';
 import { useRef } from 'react';
@@ -12,7 +13,7 @@ export default function ParallaxText() {
     });
 
     return (
-        <main ref={container} className="page-container">
+        <main ref={container} className={styles.pagecontainer}>
             <div className="spacer" />
             <div>
                 <Slide src="/ui.png" direction="left" left="-50%" progress={scrollYProgress} />

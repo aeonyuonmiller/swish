@@ -1,4 +1,5 @@
-import './Nav.css';
+// import './Nav.css';
+import styles from './Nav.module.css';
 import { useScroll, useTransform, motion } from 'motion/react';
 import { useRef } from "react"
 import Link from 'next/link';
@@ -13,7 +14,7 @@ export default function Nav() {
     const opacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
 
     return (
-        <nav ref={container} className='navi' style={{ opacity }}>
+        <nav ref={container} className={styles.navi} style={{ opacity }}>
             {/* <Slide progress={scrollYProgress} /> */}
             <Magnetic>
                 <Link href="/">Works</Link>
