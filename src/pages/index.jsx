@@ -4,6 +4,10 @@ import Head from "next/head";
 import Link from "next/link";
 import Transition from "./components/Transition";
 import HorizonSlider from "./components/HorizonSlider/HorizonSlider";
+import ParallaxText from "./components/ParallaxText/ParallaxText";
+import Gallery from "./components/Gallery";
+import Hero from "./components/Hero";
+
 
 export default function Home() {
   // Scroll Anim
@@ -24,6 +28,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Hero />
+
       <Transition ref={container}>
         <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "45vh" }}>
           <h1>Welcome</h1>
@@ -35,8 +41,9 @@ export default function Home() {
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
       </Transition>
 
+      <Gallery />
       <HorizonSlider />
-      <HorizonSlider />
+      <ParallaxText />
       <HorizonSlider />
 
       <Transition>

@@ -1,0 +1,27 @@
+.navi {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: center;
+    top: min(5vh, 10%);
+    gap: 0.5em;
+    left: calc(50% - 215px);
+    z-index: 10;
+}
+
+.navi a {
+    color: #0000009a;
+    background-color: #d7d7d72e;
+    backdrop-filter: blur(16px);
+    opacity: 1;
+}
+
+.navi a:hover {
+    color: #000;
+    background-color: #d7d7d7ce;
+    opacity: 1;
+}
+
+.navi a:hover>.navi a:not(:hover) {
+    opacity: 0.3;
+}

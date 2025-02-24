@@ -27,11 +27,11 @@ export default function Magnetic({ children }) {
             onMouseLeave={reset}
             animate={{ x, y }}
             exit={{ opacity: 0 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: .95 }}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: .98 }}
             // transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
             // transition={{ type: "spring", stiffness: 150, damping: 10, mass: 1 }}
-            transition={{ type: "spring", bounce: .6, duration: .8 }}
+            transition={{ type: "spring", bounce: .5, duration: .6 }}
         >
             {children}
         </motion.div>

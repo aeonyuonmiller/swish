@@ -3,14 +3,15 @@
   --midground: #919191;
   --foreground: #212121;
   --accent: #C6FF6A;
+  --secondary: skyblue;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #121212;
     --midground: #919191;
-    --foreground: #d9d9e4;
     /* --foreground: rgb(255, 28, 96); */
+    --foreground: #d9d9e4;
   }
 }
 
@@ -34,22 +35,26 @@ body {
   font-weight: 600;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* margin: 5vw; */
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* border: 1px solid lightblue; */
+}
+
+a.logo {
+  background: none;
 }
 
 .logo {
   position: fixed;
   display: grid;
   place-items: center;
-  width: 100%;
-  top: 0;
-  height: 100vh;
+  right: 2rem;
+  top: 5rem;
+  width: 200px;
   margin: auto;
   z-index: 5;
   pointer-events: none;
@@ -66,29 +71,36 @@ body {
 }
 
 h1 {
-  font-size: calc(1vw * 5);
-  letter-spacing: -0.2rem;
+  /* font-size: calc(1vw * 5); */
+  /* min prefered max */
+  font-size: clamp(3rem, 20vw, 16rem);
+  letter-spacing: -1rem;
 }
 
 h2 {
-  font-size: calc(1vw * 4.5);
+  /* font-size: calc(1vw * 4.5); */
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: calc(1vw * 4);
+  /* font-size: calc(1vw * 4); */
+  font-size: 2rem;
 }
 
 h4 {
-  font-size: calc(1vw * 3.5);
+  /* font-size: calc(1vw * 3.5); */
+  font-size: 1.7rem;
 }
 
 h5 {
-  font-size: calc(1vw * 3);
+  /* font-size: calc(1vw * 3); */
+  font-size: 1.4rem;
 }
 
 h6 {
-  font-size: calc(1vw * 2);
+  /* font-size: calc(1vw * 2); */
   /* font-weight: 500; */
+  font-size: 1.2rem;
 }
 
 h1,
@@ -98,19 +110,23 @@ h4,
 h5,
 h6 {
   line-height: 75%;
-  letter-spacing: 0.1vw;
+  letter-spacing: 0.1pt;
   margin-top: 8rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 360;
-  letter-spacing: .08pc;
+  letter-spacing: .08pt;
   line-height: 160%;
-  max-width: 62ch;
+  max-width: 70ch;
   margin-bottom: 2rem;
+}
+
+small {
+  font-size: 0.8rem;
 }
 
 a {
@@ -189,25 +205,28 @@ section.slide {
 }
 
 .carousel-section {
-  position: relative;
-  height: 100vh;
+  /* position: relative; */
+  min-height: 400vh;
   background-color: #1a1a1a;
 }
 
 .carousel-container {
-  top: 0;
+  top: 10;
+  width: auto;
   display: flex;
   height: 100vh;
   align-items: center;
-  overflow: hidden;
 }
 
 .carousel {
   position: sticky;
+  top: 0;
   display: flex;
-  gap: 4vw;
-  padding: 0 25vw;
-  transform: rotate(12deg);
+  width: max-content;
+  gap: 0 15vw;
+  padding-left: 30%;
+  /* padding-right: 30%; */
+  will-change: transform;
 }
 
 .card {
@@ -216,9 +235,10 @@ section.slide {
   width: 41vw;
   /* max-width: 50vw; */
   min-width: 500px;
+  border-radius: 4px;
   aspect-ratio: 16/9;
   overflow: hidden;
-  background-color: #d1d1d1;
+  transform: rotate3d(6deg);
 }
 
 .card-image {
@@ -226,11 +246,11 @@ section.slide {
   inset: 0;
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
 .card:hover .card-image {
-  transform: scale(1.1);
+  transform: scale(1.015);
 }
 
 .card-text {
@@ -240,7 +260,7 @@ section.slide {
   place-content: end center;
   background: rgba(255, 255, 255, 0.2);
   padding: 32px;
-  font-size: 100px;
+  font-size: 50px;
   font-weight: bold;
   text-transform: uppercase;
   color: whitesmoke;
@@ -248,13 +268,15 @@ section.slide {
 }
 
 .title {
-  font-size: 100px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1rem;
 }
 
 button {
   color: var(--background);
   background-color: var(--foreground);
-  border-radius: 3rem;
+  border-radius: 3remA;
   padding: 1rem;
   text-decoration: none;
   font-weight: 800;
@@ -266,7 +288,8 @@ footer {
   display: grid;
   place-items: center;
   height: 90vh;
-  background: var(--foreground);
+  bottom: 0;
+  background: var(--secondary);
   color: var(--background);
 }
 
@@ -320,7 +343,7 @@ footer {
   h6 {
     /* line-height: 100%; */
     letter-spacing: -0.1rem;
-    margin-top: 8rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
   }
 

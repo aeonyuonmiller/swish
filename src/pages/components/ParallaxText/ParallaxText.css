@@ -1,0 +1,106 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.page-container {
+    transform: rotate(20deg);
+}
+
+.slide {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    white-space: nowrap;
+    margin: 0;
+    gap: 20px;
+    transform: rotate(4deg);
+}
+
+.phrase {
+    /* position: relative; */
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    margin: 40px 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.phrase-text {
+    color: #706f6f;
+    font-size: 120px;
+    margin: 0 20px;
+}
+
+.phrase-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    border-radius: 10em;
+    /* height: 100px; */
+    overflow: hidden;
+}
+
+.phrase-image img {
+    width: 100%;
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.relative {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+
+.px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.gap-5 {
+    gap: 1.25rem;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-7-5vw {
+    font-size: 7.5vw;
+}
+
+.h-7-5vw {
+    height: 7.5vw;
+}
+
+.aspect-4-2 {
+    aspect-ratio: 4 / 2;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
