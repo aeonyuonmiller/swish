@@ -6,7 +6,7 @@ import Transition from "./components/Transition";
 import HorizonSlider from "./components/HorizonSlider/HorizonSlider";
 import ParallaxText from "./components/ParallaxText/ParallaxText";
 import Gallery from "./components/Gallery";
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero";
 
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero />
+      {/* <Hero /> */}
 
       <Transition ref={container}>
         <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "45vh" }}>
