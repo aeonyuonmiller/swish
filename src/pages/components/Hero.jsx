@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion";
-import CursorImageTrail from "./CursorImageTrail";
+// import CursorImageTrail from "./CursorImageTrail";
 
 export default function Hero({ children }) {
     return (
@@ -10,11 +10,11 @@ export default function Hero({ children }) {
 
                 <h1>okey</h1>
 
-                <CursorImageTrail>
+                {/* <CursorImageTrail>
                     <img src="globe.svg" alt="image" />
                     <img src="file.svg" alt="image" />
                     <img src="window.svg" alt="image" />
-                </CursorImageTrail>
+                </CursorImageTrail> */}
 
                 <motion.div
                     className="details"
