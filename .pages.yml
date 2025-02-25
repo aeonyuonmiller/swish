@@ -2,5 +2,5 @@ media: public/files
 content:
   - name: services
     label: Services
-    path: src/index
+    path: src/services
     type: file
