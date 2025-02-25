@@ -1,19 +1,12 @@
-// "use client"
+"use client"
 
 import { motion } from "motion/react";
-// import CursorImageTrail from "./CursorImageTrail";
 
 export default function Hero({ children, title }) {
     return (
         <>
             <motion.div className="hero-wrapper" exit>
                 <h1>{title}</h1>
-
-                {/* <CursorImageTrail>
-                    <img src="globe.svg" alt="image" />
-                    <img src="file.svg" alt="image" />
-                    <img src="window.svg" alt="image" />
-                </CursorImageTrail> */}
 
                 <motion.div
                     className="details"

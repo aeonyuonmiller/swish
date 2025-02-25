@@ -3,9 +3,6 @@ import { useScroll, useTransform, motion } from 'motion/react';
 import Head from "next/head";
 import Link from "next/link";
 import Transition from "./components/Transition";
-import HorizonSlider from "./components/HorizonSlider/HorizonSlider";
-import ParallaxText from "./components/ParallaxText/ParallaxText";
-import Gallery from "./components/Gallery";
 import Hero from "./components/Hero";
 
 
@@ -31,7 +28,7 @@ export default function Home() {
       <Hero title="Welcome" />
 
       <Transition ref={container}>
-        <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "45vh" }}>
+        <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "20vh" }}>
           <h1>Welcome</h1>
         </motion.div>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
@@ -40,11 +37,6 @@ export default function Home() {
         <h2>Headline 2</h2>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
       </Transition>
-
-      <Gallery />
-      <HorizonSlider />
-      <ParallaxText />
-      <HorizonSlider />
 
       <Transition>
         <div>
