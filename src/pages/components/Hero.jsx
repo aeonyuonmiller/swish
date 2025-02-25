@@ -6,7 +6,12 @@ export default function Hero({ children, title }) {
     return (
         <>
             <motion.div className="hero-wrapper" exit>
-                <h1>{title}</h1>
+
+                <motion.h1
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                >{title}</motion.h1>
 
                 <motion.div
                     className="details"
@@ -18,7 +23,7 @@ export default function Hero({ children, title }) {
                         visible: {
                             transition: {
                                 staggerChildren: 0.15,
-                                delay: .5
+                                delay: .2
                             }
                         }
                     }}
@@ -28,7 +33,7 @@ export default function Hero({ children, title }) {
                             key={index}
                             variants={{
                                 hidden: { opacity: 0, y: 20 },
-                                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.2 } }
                             }}
                         >
                             <h6>{title}</h6>
