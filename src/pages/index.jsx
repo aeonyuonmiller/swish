@@ -32,7 +32,7 @@ export default function Home() {
           <h1>Let's Explore</h1>
         </motion.div>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
-        <Link href="/about">About</Link>
+        <Link href="/services">Services</Link>
 
         <h2>Headline 2</h2>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
@@ -47,7 +47,7 @@ export default function Home() {
           <h4>Works</h4>
         </div>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
-        <Link href="/about">About</Link>
+        <Link href="/services">Services</Link>
 
         <h2>Headline 2</h2>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>

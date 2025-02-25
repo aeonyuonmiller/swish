@@ -75,7 +75,7 @@ h1 {
   /* min prefered max */
   font-size: clamp(3rem, 20vw, 16rem);
   letter-spacing: -1rem;
-  max-width: 10ch;
+  max-width: 8ch;
 }
 
 h2 {

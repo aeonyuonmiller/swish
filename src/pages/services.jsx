@@ -5,7 +5,7 @@ import Transition from "./components/Transition";
 // import Image from "next/image";
 import Hero from "./components/Hero";
 
-export default function About() {
+export default function Services() {
     return (
         <>
             <Head>
@@ -15,7 +15,7 @@ export default function About() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Hero title="About" />
+            <Hero title="Services" />
 
             <Transition>
 
