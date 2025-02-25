@@ -75,6 +75,7 @@ h1 {
   /* min prefered max */
   font-size: clamp(3rem, 20vw, 16rem);
   letter-spacing: -1rem;
+  max-width: 10ch;
 }
 
 h2 {
@@ -163,9 +164,16 @@ section {
   overflow: hidden;
 }
 
-section.sticky {
+.sticky {
+  align-self: flex-start;
   background: #C6FF6A;
   height: 300vh;
+  padding: 8vw;
+  top: 0px;
+}
+
+.stick {
+  position: sticky;
 }
 
 section.slider {
@@ -296,8 +304,9 @@ footer {
 }
 
 .transition-container {
-  margin: 5vw;
+  margin: 8vw;
 }
+
 
 /* .invert {
   
