@@ -25,11 +25,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero title="Welcome" />
+      <Hero title="Works" />
 
       <Transition ref={container}>
         <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "20vh" }}>
-          <h1>Welcome</h1>
+          <h1>Let's Explore</h1>
         </motion.div>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
         <Link href="/about">About</Link>
@@ -38,9 +38,13 @@ export default function Home() {
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
       </Transition>
 
+      <section className="sticky">
+        <div className="stick">okokok kokok</div>
+      </section>
+
       <Transition>
         <div>
-          <h4>Welcome</h4>
+          <h4>Works</h4>
         </div>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
         <Link href="/about">About</Link>
