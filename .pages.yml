@@ -1,1 +1,6 @@
 media: public/files
+content:
+  - name: services
+    label: Services
+    path: src/index
+    type: file
