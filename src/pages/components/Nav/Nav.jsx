@@ -21,7 +21,7 @@ export default function Nav() {
             </Magnetic>
 
             <Magnetic>
-                <Link href="/about">Services</Link>
+                <Link href="/services">Services</Link>
             </Magnetic>
 
             <Magnetic>
