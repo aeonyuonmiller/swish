@@ -1,14 +1,13 @@
-"use client"
+// "use client"
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 // import CursorImageTrail from "./CursorImageTrail";
 
-export default function Hero({ children }) {
+export default function Hero({ children, title }) {
     return (
         <>
             <motion.div className="hero-wrapper" exit>
-
-                <h1>okey</h1>
+                <h1>{title}</h1>
 
                 {/* <CursorImageTrail>
                     <img src="globe.svg" alt="image" />
@@ -63,9 +62,9 @@ function StyleSheet() {
         <style>{`
         .hero-wrapper{
             display: grid;
-            place-items: center center;
-            padding-top: 15vh;
-            height: 180svh;
+            place-items: end center;
+            padding: 15vh 0;
+            height: 150svh;
             width: 100vw;
             background-color: #845252;
             color: whitesmoke;
@@ -78,11 +77,13 @@ function StyleSheet() {
             padding-top: 0px;
             gap: 2em;
             color: whitesmoke;
-            border-bottom: 4px solid #ffffff80;
+            border-bottom: 4px solid #ffffff19;
         }
         
         .details span{
             min-width: 8em;
+            display: grid;
+            place-items: center;
         }
 
         h6 {
