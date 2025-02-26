@@ -4,3 +4,11 @@ content:
     path: src/index.mdx
     label: Homepage
     type: file
+    fields:
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          image:
+            path: src/media/posts
+            extensions: [ jpg, jpeg, png ]
