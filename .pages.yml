@@ -1,14 +1,102 @@
-media: public/files
+media:
+  input: public/files
+  output: /files
+
 content:
   - name: homepage
     path: src/index.mdx
     label: Homepage
     type: file
     fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: author
+        label: Author
+        type: string
+      - name: hashtags
+        label: Hashtags
+        type: list
+        items:
+          type: string
+      - name: background_color
+        label: Background Color
+        type: string
+        options: { format: color }
+      - name: hero_image
+        label: Hero Image
+        type: file
+        options:
+          path: public/media/hero
+          extensions: [ jpg, jpeg, png, webp ]
+      - name: seo_meta_description
+        label: SEO Meta Description
+        type: string
+        options: { maxlength: 160 }
+      - name: social_sharing_image
+        label: Social Sharing Image
+        type: file
+        options:
+          path: public/media/social
+          extensions: [ jpg, jpeg, png, webp ]
       - name: body
         label: Body
         type: rich-text
         options:
           image:
-            path: public/files
+            path: public/media/posts
+            extensions: [ jpg, jpeg, png ]
+
+  - name: about
+    path: src/about.mdx
+    label: About Page
+    type: file
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: author
+        label: Author
+        type: string
+      - name: hashtags
+        label: Hashtags
+        type: list
+        items:
+          type: string
+      - name: background_color
+        label: Background Color
+        type: string
+        options: { format: color }
+      - name: hero_image
+        label: Hero Image
+        type: file
+        options:
+          path: public/media/hero
+          extensions: [ jpg, jpeg, png, webp ]
+      - name: seo_meta_description
+        label: SEO Meta Description
+        type: string
+        options: { maxlength: 160 }
+      - name: social_sharing_image
+        label: Social Sharing Image
+        type: file
+        options:
+          path: public/media/social
+          extensions: [ jpg, jpeg, png, webp ]
+      - name: body
+        label: Body
+        type: rich-text
+        options:
+          image:
+            path: public/media/posts
             extensions: [ jpg, jpeg, png ]
