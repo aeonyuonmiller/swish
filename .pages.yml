@@ -1,6 +1,6 @@
 media: public/files
 content:
-  - name: Homepage
+  - name: homepage
     path: src/index.mdx
-    label: home page
+    label: Homepage
     type: file
