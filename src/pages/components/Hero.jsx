@@ -36,6 +36,7 @@ export default function Hero({ children, title }) {
                                 visible: { opacity: 1, y: 0, transition: { duration: 0.2 } }
                             }}
                         >
+                            <img src="file.svg" alt="file icon" />
                             <h6>{title}</h6>
                             <p>{text}</p>
                         </motion.span>
