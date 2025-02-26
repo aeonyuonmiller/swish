@@ -32,7 +32,7 @@ content:
         label: Hero Image
         type: file
         options:
-          path: public/media/hero
+          path: public/
           extensions: [ jpg, jpeg, png, webp ]
       - name: seo_meta_description
         label: SEO Meta Description
@@ -42,14 +42,14 @@ content:
         label: Social Sharing Image
         type: file
         options:
-          path: public/media/social
+          path: public/
           extensions: [ jpg, jpeg, png, webp ]
       - name: body
         label: Body
         type: rich-text
         options:
           image:
-            path: public/media/posts
+            path: public/
             extensions: [ jpg, jpeg, png ]
 
   - name: about
