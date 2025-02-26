@@ -10,5 +10,5 @@ content:
         type: rich-text
         options:
           image:
-            path: src/media/posts
+            path: public/files
             extensions: [ jpg, jpeg, png ]
