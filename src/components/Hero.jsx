@@ -82,7 +82,7 @@ function StyleSheet() {
             position: relative;
             display: grid;
             place-items: center;
-            padding: 15vh 0 8vh 0;
+            padding: 14vh 0 4vh 0;
             height: 150vh;
             width: 100vw;
             background-color: #000;
@@ -91,13 +91,14 @@ function StyleSheet() {
         }
         
         .details {
+            position: absolute;
             display: flex;
             justify-content: space-around;
             width: 80%;
-            padding-top: 20vh;
+            bottom: 20vh;
             gap: 2em;
             color: whitesmoke;
-            border-bottom: 4px solid #ffffff19;
+            border-bottom: 4px solid #ffffff;
         }
         
         .details span{
