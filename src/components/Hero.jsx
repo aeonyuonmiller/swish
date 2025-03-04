@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useScroll, useTransform, motion } from 'motion/react';
 import { SplitLetter } from "./SplitLetter";
 
-export default function Hero({ children, title }) {
+export default function Hero({ title, image }) {
 
     // Scroll Anim
     const container = useRef();
@@ -20,7 +20,7 @@ export default function Hero({ children, title }) {
             <motion.div ref={container} className="hero-wrapper">
 
                 {/* <div> */}
-                <motion.img style={{ y: parallax, transformOrigin: "0% 50%", left: 0 }} src="files/space.png" alt="whatever" className="bg-image" />
+                <motion.img style={{ y: parallax, transformOrigin: "0% 50%", left: 0 }} src={image} alt="whatever" className="bg-image" />
                 {/* </div> */}
 
                 <motion.h1
@@ -128,6 +128,10 @@ function StyleSheet() {
         @media (max-width: 1000px) {
             .details{
                 flex-direction: column;
+            }
+
+            span img{
+                display: none;
             }
 
             .hero-wrapper{
