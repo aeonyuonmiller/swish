@@ -14,7 +14,7 @@ export default function App({ Component, pageProps, router }) {
     <MotionConfig reducedMotion="user">
       
         <Link className="logo" href="/">
-          <Logo color="#ccc" />
+          <Logo />
         </ Link>
         {/* <Logo color="#C6FF6A" /> */}
         

@@ -11,9 +11,9 @@ export function SplitLetter({ children, ...rest }) {
                     style={{ display: 'inline-block', overflow: 'visible' }}
                 >
                     <motion.span
-                        initial={{ opacity: 0, y: "50%", rotate: "16deg" }}
-                        animate={{ opacity: 1, y: 0, rotate: "0deg" }}
-                        exit={{ opacity: 0, y: "-40%", rotate: "-16deg" }}
+                        initial={{ opacity: 0, y: "50%", rotate: "16deg", filter: "blur(16px)" }}
+                        animate={{ opacity: 1, y: 0, rotate: "0deg", filter: "blur(0px)" }}
+                        exit={{ opacity: 0, y: "-40%", rotate: "-16deg", filter: "blur(16px)" }}
                         transition={{
                             delay: i * 0.05, // Each letter appears 0.1s after the previous one
                             type: "spring",

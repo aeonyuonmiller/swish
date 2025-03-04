@@ -81,10 +81,10 @@ function StyleSheet() {
         .hero-wrapper{
             display: grid;
             place-items: center;
-            padding: 15vh 0 10vh 0;
-            height: 150svh;
+            padding: 15vh 0 8vh 0;
+            height: 150vh;
             width: 100vw;
-            background-color: #845252;
+            background-color: #000;
             color: whitesmoke;
             overflow: hidden;
         }
@@ -116,11 +116,11 @@ function StyleSheet() {
         }
 
         .bg-image{
-            height: 10vh;
             position: absolute;
             top: 0;
-            bottom: 0;
+            height: 150vh;
             object-fit: cover;
+            opacity: 0.8; 
         }
 
         @media (max-width: 1000px) {
