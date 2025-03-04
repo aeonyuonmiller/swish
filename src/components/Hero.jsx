@@ -79,6 +79,7 @@ function StyleSheet() {
     return (
         <style>{`
         .hero-wrapper{
+            position: relative;
             display: grid;
             place-items: center;
             padding: 15vh 0 8vh 0;

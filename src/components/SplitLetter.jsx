@@ -15,11 +15,11 @@ export function SplitLetter({ children, ...rest }) {
                         animate={{ opacity: 1, y: 0, rotate: "0deg", filter: "blur(0px)" }}
                         exit={{ opacity: 0, y: "-40%", rotate: "-16deg", filter: "blur(16px)" }}
                         transition={{
-                            delay: i * 0.05, // Each letter appears 0.1s after the previous one
+                            delay: i * 0.05,
                             type: "spring",
-                            stiffness: 200, // Controls speed (higher = faster)
-                            damping: 10, // Controls bounce resistance (higher = less bounce)
-                            bounce: 0.2 // Bounce intensity (0 = no bounce, 1 = full bounce)
+                            stiffness: 40, // controls speed (higher = faster)
+                            damping: 10, // controls bounce resistance (higher = less bounce)
+                            bounce: 0.2 // (0 = no bounce, 1 = full bounce)
                         }}                        {...rest}
                         style={{ display: 'inline-block', willChange: 'transform' }}
                         custom={i}

@@ -15,21 +15,17 @@ export default function App({ Component, pageProps, router }) {
       
         <Link className="logo" href="/">
           <Logo />
+          {/* <Logo color="#C6FF6A" /> */}
         </ Link>
-        {/* <Logo color="#C6FF6A" /> */}
-        
         {/* <PrismicPreview repositoryName={repositoryName}> */}
       <Layout>
         <Nav />
-            {/* <div className="half"></div> */}
             <AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
               <Component key={router.route} {...pageProps} />
             </AnimatePresence>
           <Footer />
           </Layout>
         {/* </PrismicPreview> */}
-      
-        {/* <Navi /> */}
         {/* <Cookies /> */}
       </MotionConfig>
   )
