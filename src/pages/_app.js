@@ -1,11 +1,11 @@
 import "../styles/globals.css"
 import Link from 'next/link';
-import Layout from './components/layout'
+import Layout from '../components/layout'
 import { AnimatePresence, MotionConfig } from "motion/react"
 import useLenis from "./hooks/useLenis";
-import Nav from "./components/Nav/Nav";
-import Footer from "./components/Footer/Footer";
-import Logo from "./components/Logo";
+import Nav from "../components/Nav/Nav";
+import Footer from "../components/Footer/Footer";
+import Logo from "../components/Logo";
 
 export default function App({ Component, pageProps, router }) {
   useLenis();

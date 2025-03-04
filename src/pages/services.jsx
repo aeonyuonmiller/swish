@@ -1,9 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import Transition from "./components/Transition";
+import Transition from "../components/Transition";
+
 // import Magnetic from "./components/Magnetic";
 // import Image from "next/image";
-import Hero from "./components/Hero";
+import Hero from "../components/Hero";
 
 export default function Services() {
     return (

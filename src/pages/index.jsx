@@ -2,8 +2,8 @@ import { useRef } from "react";
 import { useScroll, useTransform, motion } from 'motion/react';
 import Head from "next/head";
 import Link from "next/link";
-import Transition from "./components/Transition";
-import Hero from "./components/Hero";
+import Transition from "../components/Transition";
+import Hero from "../components/Hero";
 
 
 export default function Home() {
