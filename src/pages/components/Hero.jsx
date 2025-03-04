@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "motion/react";
+import { SplitLetter } from "./SplitLetter";
 
 export default function Hero({ children, title }) {
     return (
@@ -12,7 +13,9 @@ export default function Hero({ children, title }) {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                 >
-                    {title}
+                    <SplitLetter>
+                        {title}
+                    </SplitLetter>
                 </motion.h1>
                 <motion.div
                     className="details"
