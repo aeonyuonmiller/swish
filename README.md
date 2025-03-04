@@ -1,6 +1,6 @@
 ## Starter
 
-[View demo](http://swish-ich.vercel.app)
+[View demo](http://swish-chi.vercel.app)
 
 #### ToDos:
 - [x] Hero with parallax
