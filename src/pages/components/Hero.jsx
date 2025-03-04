@@ -1,12 +1,27 @@
 "use client"
 
-import { motion } from "motion/react";
+import { useRef } from "react";
+import { useScroll, useTransform, motion } from 'motion/react';
 import { SplitLetter } from "./SplitLetter";
 
 export default function Hero({ children, title }) {
+
+    // Scroll Anim
+    const container = useRef();
+    const { scrollYProgress } = useScroll({
+        target: container,
+        // 'element container' 
+        offset: ['start start', 'end start']
+    })
+    const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "20%"])
+
     return (
         <>
-            <motion.div className="hero-wrapper" exit>
+            <motion.div ref={container} className="hero-wrapper">
+
+                {/* <div> */}
+                <motion.img style={{ y: parallax, transformOrigin: "0% 50%", left: 0 }} src="files/space.png" alt="whatever" className="bg-image" />
+                {/* </div> */}
 
                 <motion.h1
                     initial={{ opacity: 0 }}
@@ -65,12 +80,13 @@ function StyleSheet() {
         <style>{`
         .hero-wrapper{
             display: grid;
-            place-items: end center;
-            padding: 15vh 0;
+            place-items: center;
+            padding: 0 0 15vh 0;
             height: 150svh;
             width: 100vw;
             background-color: #845252;
             color: whitesmoke;
+            overflow: hidden;
         }
         
         .details {
@@ -97,6 +113,14 @@ function StyleSheet() {
             height: 32px;
             width: 32px;
             margin-bottom: 1em;
+        }
+
+        .bg-image{
+            height: "10vh";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            object-fit: cover;
         }
 
         @media (max-width: 1000px) {
