@@ -297,7 +297,7 @@ footer {
   position: relative;
   display: grid;
   place-items: center;
-  height: 90vh;
+  height: 100vh;
   bottom: 0;
   background: var(--secondary);
   color: var(--background);

@@ -81,7 +81,7 @@ function StyleSheet() {
         .hero-wrapper{
             display: grid;
             place-items: center;
-            padding: 0 0 15vh 0;
+            padding: 15vh 0 10vh 0;
             height: 150svh;
             width: 100vw;
             background-color: #845252;
@@ -93,7 +93,7 @@ function StyleSheet() {
             display: flex;
             justify-content: space-around;
             width: 80%;
-            padding-top: 0px;
+            padding-top: 20vh;
             gap: 2em;
             color: whitesmoke;
             border-bottom: 4px solid #ffffff19;
@@ -116,7 +116,7 @@ function StyleSheet() {
         }
 
         .bg-image{
-            height: "10vh";
+            height: 10vh;
             position: absolute;
             top: 0;
             bottom: 0;
