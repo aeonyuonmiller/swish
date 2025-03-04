@@ -14,19 +14,22 @@ export default function Hero({ title, image }) {
         offset: ['start start', 'end start']
     })
     const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "20%"])
+    const o = useTransform(scrollYProgress, [0, 1], [1, 0.5])
+    const fade = useTransform(scrollYProgress, [0, .3], [1, 0])
 
     return (
         <>
             <motion.div ref={container} className="hero-wrapper">
 
                 {/* <div> */}
-                <motion.img style={{ y: parallax, transformOrigin: "0% 50%", left: 0 }} src={image} alt="whatever" className="bg-image" />
+                <motion.img style={{ y: parallax, opacity: o, transformOrigin: "0% 50%", left: 0 }} src={image} alt="whatever" className="bg-image" />
                 {/* </div> */}
 
                 <motion.h1
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
+                    style={{ opacity: fade }}
                 >
                     <SplitLetter>
                         {title}
@@ -81,8 +84,8 @@ function StyleSheet() {
         .hero-wrapper{
             position: relative;
             display: grid;
-            place-items: center;
-            padding: 14vh 0 4vh 0;
+            place-items: start center;
+            padding: 45vh 0 4vh 0;
             height: 150vh;
             width: 100vw;
             background-color: #000;
@@ -95,7 +98,7 @@ function StyleSheet() {
             display: flex;
             justify-content: space-around;
             width: 80%;
-            bottom: 20vh;
+            bottom: 10%;
             gap: 2em;
             color: whitesmoke;
             border-bottom: 4px solid #ffffff;
@@ -112,9 +115,9 @@ function StyleSheet() {
         }
 
         span img{
-            height: 32px;
-            width: 32px;
-            margin-bottom: 1em;
+            height: 16px;
+            width: 16px;
+            margin-bottom: .6em;
         }
 
         .bg-image{
