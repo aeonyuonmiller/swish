@@ -5,7 +5,7 @@ media:
 content:
   - name: homepage
     label: Homepage
-    path: content/homepage.md
+    path: content/homepage.mdx
     type: file
     fields:
       - name: title
@@ -17,7 +17,7 @@ content:
 
   - name: about
     label: About
-    path: content/about.md
+    path: content/about.mdx
     type: file
     fields:
       - name: title
