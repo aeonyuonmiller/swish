@@ -11,8 +11,9 @@ export default function Hero({ children, title }) {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                >{title}</motion.h1>
-
+                >
+                    {title}
+                </motion.h1>
                 <motion.div
                     className="details"
                     initial="hidden"
@@ -32,7 +33,7 @@ export default function Hero({ children, title }) {
                         <motion.span
                             key={index}
                             variants={{
-                                hidden: { opacity: 0, y: 20 },
+                                hidden: { opacity: 0, y: 10 },
                                 visible: { opacity: 1, y: 0, transition: { duration: 0.2 } }
                             }}
                         >
@@ -87,6 +88,12 @@ function StyleSheet() {
 
         h6 {
             margin-top: 1em;
+        }
+
+        span img{
+            height: 32px;
+            width: 32px;
+            margin-bottom: 1em;
         }
 
         @media (max-width: 1000px) {
