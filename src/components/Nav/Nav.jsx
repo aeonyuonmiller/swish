@@ -16,18 +16,17 @@ export default function Nav() {
     return (
         <nav ref={container} className={styles.navi} style={{ opacity }}>
             {/* <Slide progress={scrollYProgress} /> */}
-            <Magnetic>
-                <Link href="/">Work</Link>
-            </Magnetic>
+            {/* <Magnetic> */}
+            <Link href="/">Work</Link>
+            {/* </Magnetic> */}
 
-            <Magnetic>
-                <Link href="/services">Service</Link>
-            </Magnetic>
+            {/* <Magnetic> */}
+            <Link href="/services">Service</Link>
+            {/* </Magnetic> */}
 
-            <Magnetic>
-                <Link href="/">Contact</Link>
-            </Magnetic>
-
+            {/* <Magnetic> */}
+            <Link href="/">Contact</Link>
+            {/* </Magnetic> */}
         </nav >
     );
 }

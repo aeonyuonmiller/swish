@@ -13,8 +13,8 @@ export default function Hero({ title, image }) {
         // 'element container' 
         offset: ['start start', 'end start']
     })
-    const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "20%"])
-    const o = useTransform(scrollYProgress, [0, 1], [1, 0.5])
+    const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
+    const o = useTransform(scrollYProgress, [0, 1], [1, 0.4])
     const fade = useTransform(scrollYProgress, [0, .3], [1, 0])
 
     return (
@@ -51,7 +51,7 @@ export default function Hero({ title, image }) {
                         }
                     }}
                 >
-                    {detailsData.map(({ title, text }, index) => (
+                    {detailsData.map(({ icon, title, text }, index) => (
                         <motion.span
                             key={index}
                             variants={{
@@ -59,7 +59,7 @@ export default function Hero({ title, image }) {
                                 visible: { opacity: 1, y: 0, transition: { duration: 0.2 } }
                             }}
                         >
-                            <img src="file.svg" alt="file icon" />
+                            <img src={icon} alt="file icon" />
                             <h6>{title}</h6>
                             <p>{text}</p>
                         </motion.span>
@@ -72,11 +72,11 @@ export default function Hero({ title, image }) {
 }
 
 const detailsData = [
-    { title: "Client", text: "Bundeszentralamt für Steuern (BZSt)" },
-    { title: "Services", text: "Branding, Design, Webdevelopment" },
-    { title: "Technology", text: "Nextjs, Motion, Prismic, Shopify" },
-    { title: "Details", text: "okeofke ekfe f e fef e fwf efw ef ew" },
-    { title: "Year", text: "2024" }
+    { icon: "file.svg", title: "Client", text: "Bundeszentralamt für Steuern (BZSt)" },
+    { icon: "globe.svg", title: "Services", text: "Branding, Design, Webdevelopment" },
+    { icon: "window.svg", title: "Technology", text: "Nextjs, Motion, Prismic, Shopify" },
+    { icon: "file.svg", title: "Details", text: "okeofke ekfe f e fef e fwf efw ef ew" },
+    { icon: "vercel.svg", title: "Year", text: "2024" }
 ];
 
 function StyleSheet() {
@@ -86,7 +86,7 @@ function StyleSheet() {
             position: relative;
             display: grid;
             place-items: start center;
-            padding: 45vh 0 4vh 0;
+            padding: 39vh 0 4vh 0;
             height: 150vh;
             width: 100vw;
             background-color: #000;
@@ -124,7 +124,7 @@ function StyleSheet() {
         .bg-image{
             position: absolute;
             top: 0;
-            height: 150vh;
+            height: 100%;
             object-fit: cover;
             opacity: 0.8; 
         }
