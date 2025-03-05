@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import { useRef } from "react";
 import { useScroll, useTransform, motion } from 'motion/react';
@@ -21,20 +21,21 @@ export default function Hero({ title, image }) {
         <>
             <motion.div ref={container} className="hero-wrapper">
 
-                {/* <div> */}
-                <motion.img style={{ y: parallax, opacity: o, transformOrigin: "0% 50%", left: 0 }} src={image} alt="whatever" className="bg-image" />
-                {/* </div> */}
+                <motion.img
+                    style={{ y: parallax, opacity: o, transformOrigin: "50% 50%", left: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 1.05, opacity: 0 }}
+                    src={image}
+                    alt="whatever"
+                    className="bg-image"
+                />
 
-                <motion.h1
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    style={{ opacity: fade }}
-                >
+                <motion.h1 style={{ opacity: fade }}>
                     <SplitLetter>
                         {title}
                     </SplitLetter>
                 </motion.h1>
+
                 <motion.div
                     className="details"
                     initial="hidden"
