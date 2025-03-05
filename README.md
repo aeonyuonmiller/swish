@@ -5,7 +5,9 @@
 #### ToDos:
 - [x] Hero with parallax
 - [ ] Accordion
+- [ ] Carousel
 - [ ] Modal
 - [ ] Cookies
 - [ ] Shopify
 - [ ] CMS integration
+- [ ] Newsletter signup
