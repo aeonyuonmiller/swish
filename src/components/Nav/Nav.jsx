@@ -3,6 +3,7 @@ import styles from './Nav.module.css';
 import { useScroll, useTransform, motion } from 'motion/react';
 import { useRef } from "react"
 import Link from 'next/link';
+import Logo from "../Logo";
 import Magnetic from "../Magnetic"
 
 export default function Nav() {
@@ -16,16 +17,16 @@ export default function Nav() {
     return (
         <nav ref={container} className={styles.navi} style={{ opacity }}>
             {/* <Slide progress={scrollYProgress} /> */}
+            <Link className="link" href="/">Work</Link>
+
             {/* <Magnetic> */}
-            <Link href="/">Work</Link>
+            <Link className="logo" href="/">
+                <Logo color="#ccc" />
+            </Link>
             {/* </Magnetic> */}
 
             {/* <Magnetic> */}
-            <Link href="/services">Service</Link>
-            {/* </Magnetic> */}
-
-            {/* <Magnetic> */}
-            <Link href="/">Contact</Link>
+            <Link className="link" href="/services">Service</Link>
             {/* </Magnetic> */}
         </nav >
     );

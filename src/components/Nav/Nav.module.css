@@ -3,25 +3,26 @@
     position: fixed;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     top: min(5vh, 10%);
     gap: 0.5em;
     left: calc(50% - 156.5px);
     z-index: 10;
 }
 
-.navi a {
+.navi .link {
     color: #0000009a;
     background-color: #d7d7d72e;
     backdrop-filter: blur(16px);
     opacity: 1;
 }
 
-.navi a:hover {
+.navi .link:hover {
     color: #000;
     background-color: #d7d7d7ce;
     opacity: 1;
 }
 
-.navi a:hover>.navi a:not(:hover) {
+.navi .link:hover>.navi .link:not(:hover) {
     opacity: 0.3;
 }

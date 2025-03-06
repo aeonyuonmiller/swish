@@ -5,7 +5,6 @@ import { AnimatePresence, MotionConfig } from "motion/react"
 import useLenis from "./hooks/useLenis";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
-import Logo from "../components/Logo";
 
 export default function App({ Component, pageProps, router }) {
   useLenis();
@@ -13,10 +12,8 @@ export default function App({ Component, pageProps, router }) {
   return (
     <MotionConfig reducedMotion="user">
       
-        <Link className="logo" href="/">
-          <Logo />
+          {/* <Logo /> */}
           {/* <Logo color="#C6FF6A" /> */}
-        </ Link>
         {/* <PrismicPreview repositoryName={repositoryName}> */}
       <Layout>
         <Nav />

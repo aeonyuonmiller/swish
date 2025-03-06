@@ -29,7 +29,7 @@ export default function Home() {
 
       <Transition ref={container}>
         <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "20vh" }}>
-          <h1>Let's Explore</h1>
+          <h2>Let's Explore</h2>
         </motion.div>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
         <Link href="/services">Services</Link>
