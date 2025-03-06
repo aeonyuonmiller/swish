@@ -1,3 +1,3 @@
-import { EditComponent } from "./editor-info";
+import { EditComponent } from "../editor-note/edit-component";
 
 export { EditComponent };
