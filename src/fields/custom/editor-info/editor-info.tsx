@@ -2,12 +2,14 @@
 
 import { forwardRef } from "react";
 
-const EditorInfo = forwardRef((props: any, ref: React.Ref<HTMLDivElement>) => {
+const EditComponent = forwardRef((props: any, ref: React.Ref<HTMLDivElement>) => {
+    const message = props?.value || "ℹ️ Default info for the editor."; // Fallback message
+
     return (
-        <div ref={ref} style={{ backgroundColor: "hotpink", padding: "1em", borderRadius: 4 }} >
-            ⚠️ Please ensure all images are under <strong>500KB</strong> before uploading!
+        <div ref={ref} className="editor-info">
+            {message}
         </div>
     );
 });
 
-export { EditorInfo };
+export { EditComponent };
