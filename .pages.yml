@@ -11,6 +11,7 @@ content:
       - name: editor_info
         label: Editor Information
         type: editor-info
+        value: "⚠️ Please double-check spelling before publishing!"
         # No need for options since this field is informational only
       - name: title
         label: Title
