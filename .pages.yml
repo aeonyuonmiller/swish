@@ -3,8 +3,8 @@ media:
   output: /files
 
 content:
-  - name: homepage
-    label: Homepage
+  - name: index
+    label: Index
     path: content/index.mdx
     type: file
     fields:
