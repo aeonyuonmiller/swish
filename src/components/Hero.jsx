@@ -100,9 +100,12 @@ function StyleSheet() {
             justify-content: space-around;
             width: 80%;
             bottom: 10%;
+            padding: 2em 0 0 0;
+            border-radius: 30px; 
             gap: 2em;
             color: whitesmoke;
-            border-bottom: 4px solid #ffffff;
+            background: #0000003a;
+            border-bottom: 1px solid #00000082;
         }
         
         .details span{

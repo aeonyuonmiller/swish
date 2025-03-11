@@ -12,12 +12,13 @@ const Footer = () => {
         offset: ['start 90%', 'end 100%']
     })
     const parallax = useTransform(scrollYProgress, [0, 1], ["60%", "0%"])
+    const r = useTransform(scrollYProgress, [0, 1], ["6deg", "0deg"])
     const size = useTransform(scrollYProgress, [0, 1], [0.9, 1])
 
     return (
         <motion.footer ref={container}>
             <div>
-                <motion.h5 style={{ y: parallax, scale: size, transformOrigin: "50% 50%", left: 0 }}
+                <motion.h5 style={{ y: parallax, scale: size, rotate: r, transformOrigin: "50% 50%", left: 0 }}
                 >Get in touch</motion.h5>
             </div>
         </motion.footer>

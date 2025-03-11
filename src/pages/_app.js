@@ -17,7 +17,8 @@ export default function App({ Component, pageProps, router }) {
         {/* <PrismicPreview repositoryName={repositoryName}> */}
       <Layout>
         <Nav />
-            <AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
+        <AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
+          
               <Component key={router.route} {...pageProps} />
             </AnimatePresence>
           <Footer />

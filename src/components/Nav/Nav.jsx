@@ -20,7 +20,7 @@ export default function Nav() {
             <Link className="link" href="/">Work</Link>
 
             {/* <Magnetic> */}
-            <Link className="logo" href="/">
+            <Link className="logo" href="/" scroll={false} >
                 <Logo color="#ccc" />
             </Link>
             {/* </Magnetic> */}
