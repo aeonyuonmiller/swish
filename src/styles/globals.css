@@ -52,7 +52,7 @@ a.logo {
   position: relative;
   display: grid;
   place-items: center;
-  width: 300px;
+  width: 120px;
   z-index: 5;
 }
 

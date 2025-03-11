@@ -16,7 +16,7 @@ export default function Services() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Hero title="Service" image="files/manuel-weber-min.jpg" />
+            <Hero title="Works" image="files/manuel-weber-min.jpg" />
 
             <Transition>
 
