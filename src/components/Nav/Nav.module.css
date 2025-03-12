@@ -10,19 +10,19 @@
     z-index: 10;
 }
 
-.navi .link {
+.navi a.link {
     color: #0000009a;
-    background-color: #d7d7d72e;
+    background-color: #333;
     backdrop-filter: blur(16px);
     opacity: 1;
 }
 
-.navi .link:hover {
+.navi a.link:hover {
     color: #000;
     background-color: #d7d7d7ce;
     opacity: 1;
 }
 
-.navi .link:hover>.navi .link:not(:hover) {
+.navi a.link:hover>.navi a.link:not(:hover) {
     opacity: 0.3;
 }

@@ -302,8 +302,7 @@ footer {
 
 footer h5 {
   font-size: 16vw;
-  color: var(--accent);
-  text-shadow: rgba(9, 114, 155, 0.384) 20px 20px 30px;
+  color: var(--background);
   text-align: center;
 }
 
@@ -311,6 +310,16 @@ footer h5 {
   margin: 8vw;
 }
 
+.email-link {
+  position: absolute;
+  margin: auto;
+}
+
+.copyright {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 10%;
+}
 
 /* .invert {
   

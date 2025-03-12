@@ -26,6 +26,7 @@ export default function Home() {
       </Head>
 
       <Hero title="index" image="files/out-there.jpg" />
+      <Hero title="second" image="files/manuel-weber-min.jpg" />
 
       <Transition ref={container}>
         <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "20vh" }}>
