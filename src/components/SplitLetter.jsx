@@ -16,7 +16,11 @@ export function SplitLetter({ children, ...rest }) {
                         initial={{ scale: 0.5, opacity: 0, rotate: "16deg" }}
                         animate={{ scale: 1, opacity: 1, rotate: "0deg" }}
                         exit={{
-                            scale: 0, opacity: 0, y: -40, rotate: "-16deg", transition: {
+                            y: -40,
+                            scale: 0,
+                            opacity: 0,
+                            rotate: "-16deg",
+                            transition: {
                                 delay: i * 0.05,
                                 type: "spring",
                                 duration: 1.2,

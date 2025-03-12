@@ -4,7 +4,7 @@ const TinyAnim = ({ children }
 ) => (
     <motion.div
         initial={{ x: 40, y: 40, opacity: 0 }}
-        animate={{ x: 0, y: 0, opacity: 1 }}
+        whileInView={{ x: 0, y: 0, opacity: 1 }}
         exit={{ x: -40, y: -40, opacity: 0 }}
         transition={{
             type: "spring",
