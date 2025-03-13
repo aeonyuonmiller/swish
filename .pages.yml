@@ -8,10 +8,10 @@ content:
     path: content/index.mdx
     type: file
     fields:
-      - name: editor_info
-        label: Editor Information
-        type: editor-info
-        value: "⚠️ Please double-check spelling before publishing!"
+      #- name: editor_info
+        #label: Editor Information
+        #type: editor-info
+        # value: "⚠️ Please double-check spelling before publishing!"
         # No need for options since this field is informational only
       - name: title
         label: Title
