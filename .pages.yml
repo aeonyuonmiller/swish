@@ -13,6 +13,9 @@ content:
         #type: editor-info
         # value: "⚠️ Please double-check spelling before publishing!"
         # No need for options since this field is informational only
+      - name: bgColor
+        label: Background-Color
+        type: string
       - name: title
         label: Title
         type: string
