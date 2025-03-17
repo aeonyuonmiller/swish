@@ -13,25 +13,25 @@ export function SplitLetter({ children, ...rest }) {
                     <motion.span
                         {...rest}
                         // initial={{ scale: 0.5, opacity: 0, y: "50%", rotate: "16deg", filter: "blur(16px)" }}
-                        initial={{ scale: 0.5, opacity: 0, rotate: "16deg" }}
-                        animate={{ scale: 1, opacity: 1, rotate: "0deg" }}
+                        initial={{ y: "300%", scale: .5, opacity: 0, rotate: "10deg" }}
+                        animate={{ y: "0%", scale: 1, opacity: 1, rotate: "0deg" }}
                         exit={{
-                            y: -40,
+                            y: "-300%",
                             scale: 0,
                             opacity: 0,
-                            rotate: "-16deg",
+                            rotate: "-10deg",
                             transition: {
                                 delay: i * 0.05,
                                 type: "spring",
-                                duration: 1.2,
-                                bounce: 0.5 // (0 = no bounce, 1 = full bounce)
+                                duration: .5,
+                                bounce: 0.3 // (0 = no bounce, 1 = full bounce)
                             }
                         }}
                         transition={{
                             delay: i * 0.05,
                             type: "spring",
                             stiffness: 40, // controls speed (higher = faster)
-                            damping: 10, // controls bounce resistance (higher = less bounce)
+                            damping: 5, // controls bounce resistance (higher = less bounce)
                             bounce: 0.5 // (0 = no bounce, 1 = full bounce)
                         }}
                         style={{ display: 'inline-block', willChange: 'transform' }}

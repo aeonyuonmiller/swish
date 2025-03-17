@@ -48,6 +48,22 @@ a.logo {
   background: none;
 }
 
+a.logo:hover {
+  background: none;
+}
+
+a.logo .white-hover {
+  /* background: none; */
+  fill: #000;
+  transition: .6s ease .2s;
+}
+
+a.logo:hover .white-hover {
+  /* background: none; */
+  fill: #fff;
+  transition: .2s ease;
+}
+
 .logo {
   position: relative;
   display: grid;
@@ -103,7 +119,7 @@ h5,
 h6 {
   line-height: 75%;
   letter-spacing: 0.1pt;
-  margin-top: 8rem;
+  margin-top: 28px;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
@@ -132,6 +148,7 @@ small {
 a {
   padding: 1rem 1.2rem;
   border-radius: 3rem;
+  max-width: fit-content;
   color: var(--background);
   text-decoration: none;
   background-color: var(--foreground);
@@ -307,7 +324,16 @@ footer h5 {
 }
 
 .transition-container {
-  margin: 4vw 25vw;
+  /* margin: 4vw 25vw; */
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 60ch) 1fr;
+}
+
+.transition-container * {
+  grid-column: 2;
+  margin-left: 28px;
+  margin-right: 28px;
 }
 
 .email-link {

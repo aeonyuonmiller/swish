@@ -25,8 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero title="index" image="files/out-there.jpg" />
-      <Hero title="second" image="files/manuel-weber-min.jpg" />
+      <Hero title="index&trade;" image="files/out-there.jpg" />
 
       <Transition ref={container}>
         <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "20vh" }}>

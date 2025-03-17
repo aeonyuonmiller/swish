@@ -11,20 +11,18 @@ export default function App({ Component, pageProps, router }) {
 
   return (
     <MotionConfig reducedMotion="user">
-      
           {/* <Logo /> */}
           {/* <Logo color="#C6FF6A" /> */}
         {/* <PrismicPreview repositoryName={repositoryName}> */}
       <Layout>
         <Nav />
-        <AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
-          
-              <Component key={router.route} {...pageProps} />
-            </AnimatePresence>
-          <Footer />
-          </Layout>
-        {/* </PrismicPreview> */}
-        {/* <Cookies /> */}
-      </MotionConfig>
+          <AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
+            <Component key={router.route} {...pageProps} />
+          </AnimatePresence>
+        <Footer />
+      </Layout>
+      {/* </PrismicPreview> */}
+      {/* <Cookies /> */}
+    </MotionConfig>
   )
 }
