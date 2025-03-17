@@ -37,13 +37,7 @@ export default function IndexLayout({ title, date, color, children }) {
 
                 <h2>Headline 2</h2>
                 <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
-            </Transition>
 
-            <section className="sticky">
-                <div className="stick">okokok kokok</div>
-            </section>
-
-            <Transition>
                 <div>
                     <h4>Works</h4>
                 </div>

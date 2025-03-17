@@ -5,7 +5,7 @@ media:
 content:
   - name: index
     label: Index
-    path: src/content/index.mdx
+    path: content/index.mdx
     type: file
     fields:
       - name: title
