@@ -16,7 +16,6 @@ export default function IndexLayout({ title, date, color, children }) {
     })
     const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "-200%"])
 
-
     return (
 
         <>
@@ -27,7 +26,7 @@ export default function IndexLayout({ title, date, color, children }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Hero title="index" image="files/out-there.jpg" />
+            <Hero title={title} image="files/out-there.jpg" />
 
             <Transition ref={container}>
                 <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "20vh" }}>
