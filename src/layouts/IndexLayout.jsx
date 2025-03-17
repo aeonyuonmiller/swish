@@ -5,7 +5,7 @@ import Link from "next/link";
 import Transition from "../components/Transition";
 import Hero from "../components/Hero";
 
-export default function IndexLayout({ title, date, color, children }) {
+export default function IndexLayout({ title, children }) {
 
     // Scroll Anim
     const container = useRef();
@@ -32,20 +32,7 @@ export default function IndexLayout({ title, date, color, children }) {
                 <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "20vh" }}>
                     <h2>Let's Explore</h2>
                 </motion.div>
-                <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
-                <Link href="/services">Services</Link>
-
-                <h2>Headline 2</h2>
-                <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
-
-                <div>
-                    <h4>Works</h4>
-                </div>
-                <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
-                <Link href="/services">Services</Link>
-
-                <h2>Headline 2</h2>
-                <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
+                {children}
             </Transition>
         </>
     );
