@@ -5,7 +5,7 @@ media:
 content:
   - name: index
     label: Index
-    path: content/index.mdx
+    path: content/index.md
     type: file
     fields:
       - name: title
@@ -17,7 +17,7 @@ content:
 
   - name: about
     label: About
-    path: content/about.mdx
+    path: content/about.md
     type: file
     fields:
       - name: title

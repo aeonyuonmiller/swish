@@ -10,14 +10,21 @@
     z-index: 10;
 }
 
-.navi a.link {
+nav.navi a {
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: .15em;
+    font-weight: 400;
+}
+
+nav.navi a.link {
     color: #0000009a;
     background-color: #333;
     backdrop-filter: blur(16px);
     opacity: 1;
 }
 
-.navi a.link:hover {
+nav.navi a.link:hover {
     color: #000;
     background-color: #d7d7d7ce;
     opacity: 1;

@@ -7,15 +7,6 @@ import Hero from "../components/Hero";
 
 export default function IndexLayout({ title, children }) {
 
-    // Scroll Anim
-    const container = useRef();
-    const { scrollYProgress } = useScroll({
-        target: container,
-        // 'element container' 
-        offset: ['start start', 'end start']
-    })
-    const parallax = useTransform(scrollYProgress, [0, 1], ["0%", "-200%"])
-
     return (
 
         <>
@@ -29,9 +20,6 @@ export default function IndexLayout({ title, children }) {
             <Hero title={title} image="files/out-there.jpg" />
 
             <Transition ref={container}>
-                <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "20vh" }}>
-                    <h2>Let's Explore</h2>
-                </motion.div>
                 {children}
             </Transition>
         </>

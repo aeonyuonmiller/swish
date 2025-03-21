@@ -85,10 +85,11 @@ a.logo:hover .white-hover {
 h1 {
   /* font-size: calc(1vw * 5); */
   /* min prefered max */
-  /* font-size: clamp(4rem, 6vw, 8rem); */
-  font-size: 14rem;
-  letter-spacing: -1rem;
-  max-width: 1200px;
+  font-size: clamp(4rem, 15vw, 30rem);
+  /* font-size: 24rem; */
+  font-weight: 100;
+  letter-spacing: -50px;
+  max-width: 1600px;
 }
 
 h2 {
@@ -327,7 +328,7 @@ footer h5 {
   /* margin: 4vw 25vw; */
   margin-bottom: 80px;
   display: grid;
-  grid-template-columns: 1fr minmax(280px, 60ch) 1fr;
+  grid-template-columns: 1fr minmax(300px, 80ch) 1fr;
 }
 
 .transition-container * {
