@@ -6,7 +6,7 @@
     align-items: center;
     top: min(5vh, 10%);
     gap: 0.5em;
-    left: calc(50% - 154px);
+    left: calc(50% - 165px);
     z-index: 10;
 }
 
