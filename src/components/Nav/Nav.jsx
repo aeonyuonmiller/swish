@@ -17,14 +17,14 @@ export default function Nav() {
     return (
         <nav ref={container} className={styles.navi} style={{ opacity }}>
             {/* <Slide progress={scrollYProgress} /> */}
-            <Link className="logo" href="/">
+            <Link className="logo" href="/#">
                 <Logo2 color="#333" />
             </Link>
 
             {/* <Magnetic> */}
             <Link className="link" href="/services">Work</Link>
 
-            <Link className="link" href="/blog">Blog</Link>
+            <Link className="link" href="/about">Blog</Link>
             {/* </Magnetic> */}
         </nav >
     );
