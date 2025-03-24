@@ -101,7 +101,7 @@ function StyleSheet() {
             justify-content: space-around;
             width: 80%;
             bottom: 10%;
-            padding: 2em 0 0 0;
+            padding: 2em 0 0 2em;
             border-radius: 30px; 
             gap: 2em;
             color: whitesmoke;

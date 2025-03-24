@@ -82,14 +82,26 @@ a.logo:hover .white-hover {
   z-index: -1;
 }
 
-h1 {
+.hero-wrapper h1 {
   /* font-size: calc(1vw * 5); */
   /* min prefered max */
   font-size: clamp(4rem, 15vw, 30rem);
   /* font-size: 24rem; */
   font-weight: 100;
-  letter-spacing: -50px;
-  max-width: 1600px;
+  letter-spacing: -.5rem !important;
+  /* max-width: 1400px; */
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  /* font-size: calc(1vw * 5); */
+  /* min prefered max */
+  font-size: clamp(4rem, 15vw, 4.5rem);
+  /* font-size: 24rem; */
+  font-weight: 100;
+  letter-spacing: 0.25rem !important;
+  width: 100%;
 }
 
 h2 {
