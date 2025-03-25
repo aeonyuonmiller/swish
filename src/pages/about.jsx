@@ -5,9 +5,10 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
 import Hero from "../components/Hero";
+import Transition from "../components/Transition";
 
 export async function getStaticProps() {
-    const filePath = path.join(process.cwd(), "content", "about.mdx"); // Load contact.mdx
+    const filePath = path.join(process.cwd(), "content", "about.mdx");
     const fileContent = fs.readFileSync(filePath, "utf-8");
 
     const { data, content } = matter(fileContent);
@@ -16,16 +17,19 @@ export async function getStaticProps() {
     return {
         props: {
             title: data.title,
+            image: data.image,
             mdxSource,
         },
     };
 }
 
-export default function ContactPage({ title, mdxSource }) {
+export default function ContactPage({ title, mdxSource, image }) {
     return (
         <div>
-            <Hero title={title} image="files/out-there.jpg" />
-            <MDXRemote {...mdxSource} />
+            <Hero title={title} image={image} />
+            <Transition>
+                <MDXRemote {...mdxSource} />
+            </Transition>
         </div>
     );
 }

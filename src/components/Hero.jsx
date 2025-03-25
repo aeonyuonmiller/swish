@@ -20,16 +20,17 @@ export default function Hero({ title, image }) {
     return (
         <>
             <motion.div ref={container} className="hero-wrapper">
-
-                <motion.img
-                    style={{ y: parallax, transformOrigin: "50% 50%", left: 0 }}
-                    initial={{ scale: 1, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 1.02, opacity: 0 }}
-                    src={image}
-                    alt="whatever"
-                    className="bg-image"
-                />
+                {image &&
+                    <motion.img
+                        style={{ y: parallax, transformOrigin: "50% 50%", left: 0 }}
+                        initial={{ scale: 1, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 1.02, opacity: 0 }}
+                        src={image}
+                        alt="whatever"
+                        className="bg-image"
+                    />
+                }
 
                 <motion.h1 style={{ opacity: fade }}>
                     <SplitLetter>

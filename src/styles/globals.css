@@ -338,7 +338,7 @@ footer h5 {
 
 .transition-container {
   /* margin: 4vw 25vw; */
-  margin-bottom: 80px;
+  margin: 8em 0;
   display: grid;
   grid-template-columns: 1fr minmax(300px, 80ch) 1fr;
 }

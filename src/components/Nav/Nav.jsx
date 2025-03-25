@@ -14,10 +14,15 @@ export default function Nav() {
     });
     const opacity = useTransform(scrollYProgress, [0.7, 1], [1, 0]);
 
+    const v = {
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0, transition: { delay: .8, duration: 1 } }
+    }
+
     return (
-        <nav ref={container} className={styles.navi} style={{ opacity }}>
+        <motion.nav variants={v} initial="hidden" animate="show" ref={container} className={styles.navi} style={{ opacity }}>
             {/* <Slide progress={scrollYProgress} /> */}
-            <Link className="logo" href="/#">
+            <Link className="logo" href="/">
                 <Logo2 color="#333" />
             </Link>
 
@@ -26,6 +31,6 @@ export default function Nav() {
 
             <Link className="link" href="/about">Blog</Link>
             {/* </Magnetic> */}
-        </nav >
+        </motion.nav>
     );
 }
