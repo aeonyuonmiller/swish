@@ -12,9 +12,9 @@ export default function Nav() {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
-            if (currentScrollY > lastScrollY.current + 4) {
+            if (currentScrollY > lastScrollY.current + 2) {
                 setHidden(true); // Hide when scrolling down 50px
-            } else if (currentScrollY < lastScrollY.current - 4) {
+            } else if (currentScrollY < lastScrollY.current - 2) {
                 setHidden(false); // Show when scrolling up 50px
             }
 
@@ -36,7 +36,8 @@ export default function Nav() {
             className={styles.navi}
             animate={{
                 y: hidden ? "-100%" : 0,
-                opacity: hidden ? 0 : 1
+                opacity: hidden ? 0 : 1,
+                scale: hidden ? 0.9 : 1
             }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
         >
