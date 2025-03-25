@@ -1,31 +1,55 @@
-// import './Nav.css';
-import styles from './Nav.module.css';
-import { useScroll, useTransform, motion } from 'motion/react';
-import { useRef } from "react"
-import Link from 'next/link';
+import { useEffect, useState, useRef } from "react";
+import { motion } from "motion/react";
+import styles from "./Nav.module.css";
+import Link from "next/link";
 import Logo2 from "../Logo2";
 
 export default function Nav() {
-    const container = useRef();
-    const { scrollYProgress } = useScroll({
-        target: container,
-        offset: ['start end', 'end start']
-    });
+    const [hidden, setHidden] = useState(false);
+    const lastScrollY = useRef(0);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY.current + 4) {
+                setHidden(true); // Hide when scrolling down 50px
+            } else if (currentScrollY < lastScrollY.current - 4) {
+                setHidden(false); // Show when scrolling up 50px
+            }
+
+            lastScrollY.current = currentScrollY;
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Variants for animation on mount and when toggling visibility
     const v = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0, transition: { delay: .8, duration: 1 } }
-    }
+        hidden: { opacity: 0, y: -20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    };
 
     return (
-        <motion.nav variants={v} initial="hidden" animate="show" ref={container} className={styles.navi}>
-            <Link className="logo" href="/">
-                <Logo2 color="#333" />
-            </Link>
+        <motion.nav
+            className={styles.navi}
+            animate={{
+                y: hidden ? "-100%" : 0,
+                opacity: hidden ? 0 : 1
+            }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+        >
+            <motion.div variants={v}
+                initial="hidden"
+                animate="visible">
+                <Link className={styles.logo} href="/">
+                    <Logo2 color="#333" />
+                </Link>
 
-            <Link className="link" href="/services">Work</Link>
-
-            <Link className="link" href="/about">Blog</Link>
+                <Link className={styles.link} href="/services">Work</Link>
+                <Link className={styles.link} href="/about">Blog</Link>
+            </motion.div>
         </motion.nav>
     );
 }
