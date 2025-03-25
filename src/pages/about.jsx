@@ -17,7 +17,7 @@ export async function getStaticProps() {
     return {
         props: {
             title: data.title,
-            image: data.image,
+            image: data.image || null,
             mdxSource,
         },
     };
