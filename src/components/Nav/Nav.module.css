@@ -6,7 +6,7 @@
     align-items: center;
     top: min(5vh, 10%);
     gap: 0.5em;
-    left: calc(50% - 165px);
+    left: calc(50% - 180px);
     z-index: 10;
 }
 
@@ -32,4 +32,14 @@ nav.navi a.link:hover {
 
 .navi a.link:hover>.navi a.link:not(:hover) {
     opacity: 0.3;
+}
+
+.logo {
+    width: 150px;
+    background-color: transparent;
+    margin-top: 16px;
+}
+
+.logo:hover {
+    background-color: transparent;
 }

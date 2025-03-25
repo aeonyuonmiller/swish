@@ -33,7 +33,6 @@ export default function Nav() {
 
     return (
         <motion.nav
-            className={styles.navi}
             animate={{
                 y: hidden ? "-100%" : 0,
                 opacity: hidden ? 0 : 1,
@@ -42,6 +41,7 @@ export default function Nav() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
         >
             <motion.div variants={v}
+                className={styles.navi}
                 initial="hidden"
                 animate="visible">
                 <Link className={styles.logo} href="/">
