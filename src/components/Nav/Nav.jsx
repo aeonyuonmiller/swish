@@ -27,7 +27,7 @@ export default function Nav() {
 
     // Variants for animation on mount and when toggling visibility
     const v = {
-        hidden: { opacity: 0, y: -20 },
+        hide: { opacity: 0, y: -20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
     };
 
@@ -42,14 +42,14 @@ export default function Nav() {
         >
             <motion.div variants={v}
                 className={styles.navi}
-                initial="hidden"
-                animate="visible">
+                initial="hide"
+                animate="visible"
+            >
                 <Link className={styles.logo} href="/">
-                    <Logo2 color="#333" />
+                    <Logo2 color="#666" />
                 </Link>
-
-                <Link className={styles.link} href="/services">Work</Link>
-                <Link className={styles.link} href="/about">Blog</Link>
+                <Link className={styles.link} href="services">Work</Link>
+                <Link className={styles.link} href="about">Blog</Link>
             </motion.div>
         </motion.nav>
     );

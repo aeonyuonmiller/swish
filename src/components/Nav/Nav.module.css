@@ -7,7 +7,7 @@
     top: min(5vh, 10%);
     gap: 0.5em;
     left: calc(50% - 180px);
-    z-index: 10;
+    z-index: 20;
 }
 
 nav.navi a {

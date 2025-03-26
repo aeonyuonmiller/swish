@@ -349,6 +349,12 @@ footer h5 {
   margin-right: 28px;
 }
 
+.transition-container strong,
+.transition-container em {
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
+
 .email-link {
   position: absolute;
   margin: auto;
