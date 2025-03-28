@@ -18,11 +18,15 @@ content:
   - name: about
     label: About
     path: content/about.mdx
-    type: file
+    type: image
+    description: Image used in the hero of the site
     fields:
       - name: title
         label: Title
         type: string
+      - name: image
+        label: Image
+        type: file
       - name: body
         label: Body
         type: rich-text
