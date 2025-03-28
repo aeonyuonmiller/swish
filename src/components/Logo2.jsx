@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const SvgIcon = ({ color = "#C6FF6A" }) => (
+const SvgIcon = ({ color = "#ffffff" }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"

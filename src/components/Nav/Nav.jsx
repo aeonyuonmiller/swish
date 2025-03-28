@@ -12,9 +12,9 @@ export default function Nav() {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
 
-            if (currentScrollY > lastScrollY.current + 2) {
+            if (currentScrollY > lastScrollY.current + 10) {
                 setHidden(true); // Hide when scrolling down 50px
-            } else if (currentScrollY < lastScrollY.current - 2) {
+            } else if (currentScrollY < lastScrollY.current - 10) {
                 setHidden(false); // Show when scrolling up 50px
             }
 
@@ -27,7 +27,7 @@ export default function Nav() {
 
     // Variants for animation on mount and when toggling visibility
     const v = {
-        hide: { opacity: 0, y: -20 },
+        hidden: { opacity: 0, y: -20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
     };
 
@@ -36,20 +36,20 @@ export default function Nav() {
             animate={{
                 y: hidden ? "-100%" : 0,
                 opacity: hidden ? 0 : 1,
-                scale: hidden ? 0.9 : 1
+                scale: hidden ? 0.95 : 1
             }}
+            className={styles.navi}
             transition={{ duration: 0.3, ease: "easeInOut" }}
         >
             <motion.div variants={v}
-                className={styles.navi}
-                initial="hide"
+                initial="hidden"
                 animate="visible"
             >
                 <Link className={styles.logo} href="/">
-                    <Logo2 color="#666" />
+                    <Logo2 color="#fff" />
                 </Link>
-                <Link className={styles.link} href="services">Work</Link>
-                <Link className={styles.link} href="about">Blog</Link>
+                <Link className={styles.link} href="/services">Work</Link>
+                <Link className={styles.link} href="/about">Blog</Link>
             </motion.div>
         </motion.nav>
     );

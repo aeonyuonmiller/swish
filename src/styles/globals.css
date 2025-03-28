@@ -41,25 +41,29 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* border: 1px solid lightblue; */
+  border: 1px solid red;
 }
 
-a.logo {
+/* a.logo {
   background: none;
 }
 
 a.logo:hover {
   background: none;
-}
+} */
 
-a.logo .white-hover {
-  /* background: none; */
-  fill: #000;
+.navi a.logo {
   transition: .6s ease .2s;
 }
 
+.white-hover {
+  background: none;
+  width: 125px;
+  fill: #fff;
+}
+
 a.logo:hover .white-hover {
-  /* background: none; */
+  background: none;
   fill: #fff;
   transition: .2s ease;
 }

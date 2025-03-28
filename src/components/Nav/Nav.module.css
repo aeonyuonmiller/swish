@@ -1,4 +1,4 @@
-.navi {
+nav.navi {
     display: flex;
     position: fixed;
     flex-direction: row;
@@ -7,36 +7,31 @@
     top: min(5vh, 10%);
     gap: 0.5em;
     left: calc(50% - 180px);
-    z-index: 20;
+    z-index: 2;
 }
 
-nav.navi a {
+.navi a {
     text-transform: uppercase;
     font-size: 8px;
     letter-spacing: .15em;
     font-weight: 400;
 }
 
-nav.navi a.link {
-    color: #0000009a;
+.navi a.link {
+    color: #fff;
     background-color: #333;
     backdrop-filter: blur(16px);
     opacity: 1;
 }
 
-nav.navi a.link:hover {
+.navi a.link:hover {
     color: #000;
-    background-color: #d7d7d7ce;
+    background-color: #fff;
     opacity: 1;
 }
 
-.navi a.link:hover>.navi a.link:not(:hover) {
-    opacity: 0.3;
-}
-
-.logo {
+nav.navi .logo {
     width: 150px;
-    background-color: transparent;
     margin-top: 16px;
 }
 
