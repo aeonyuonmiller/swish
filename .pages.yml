@@ -19,7 +19,6 @@ content:
     label: About
     path: content/about.mdx
     type: image
-    description: Image used in the hero of the site
     fields:
       - name: title
         label: Title
