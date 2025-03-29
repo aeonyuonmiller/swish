@@ -13,13 +13,31 @@ export function SplitLetter({ children, ...rest }) {
                     <motion.span
                         {...rest}
                         // initial={{ scale: 0.5, opacity: 0, y: "50%", rotate: "16deg", filter: "blur(16px)" }}
-                        initial={{ y: "300%", scale: .5, opacity: 0, rotate: "10deg" }}
-                        animate={{ y: "0%", scale: 1, opacity: 1, rotate: "0deg" }}
+                        initial={{
+                            y: "200%",
+                            scale: .9,
+                            opacity: 0,
+                            rotateX: 90,
+                            transformStyle: "preserve-3d",
+                            perspective: 9999,
+                            transformOrigin: "50% 50%",
+                            margin: "0 auto"
+                        }}
+                        animate={{
+                            y: "0%",
+                            scale: 1,
+                            opacity: 1,
+                            rotateX: 0,
+                            transformStyle: "preserve-3d",
+                            perspective: 9999,
+                            transformOrigin: "50% 50%",
+                            margin: "0 auto"
+                        }}
                         exit={{
                             y: "-10%",
                             scale: 0,
                             opacity: 0,
-                            rotate: "-10deg",
+                            rotateX: -10,
                             transition: {
                                 delay: i * 0.05,
                                 type: "spring",
@@ -31,8 +49,8 @@ export function SplitLetter({ children, ...rest }) {
                             delay: i * 0.05,
                             type: "spring",
                             stiffness: 40, // controls speed (higher = faster)
-                            damping: 5, // controls bounce resistance (higher = less bounce)
-                            bounce: 0.5 // (0 = no bounce, 1 = full bounce)
+                            damping: 10, // controls bounce resistance (higher = less bounce)
+                            bounce: 0.3 // (0 = no bounce, 1 = full bounce)
                         }}
                         style={{ display: 'inline-block', willChange: 'transform' }}
                         custom={i}
