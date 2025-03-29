@@ -16,7 +16,7 @@ content:
   - name: about
     label: About
     path: content/about.mdx
-    type: image
+    type: file
     fields:
       - name: title
         label: Title
