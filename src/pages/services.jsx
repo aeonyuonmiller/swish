@@ -5,6 +5,8 @@ import Transition from "../components/Transition";
 // import Magnetic from "./components/Magnetic";
 // import Image from "next/image";
 import Hero from "../components/Hero";
+import HorizontalScrollGallery from "../components/Carousel";
+import Carousel from "../components/Carousel";
 
 export default function Services() {
     return (
@@ -40,6 +42,15 @@ export default function Services() {
                 <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
 
             </Transition>
+            <Carousel>
+                {/* <img src="files/out-there.jpg" alt="Image 1" style={{ width: "300px", height: "400px", borderRadius: "15px" }} />
+                <img src="files/out-there.jpg" alt="Image 1" style={{ width: "300px", height: "400px", borderRadius: "15px" }} />
+                <img src="files/out-there.jpg" alt="Image 1" style={{ width: "300px", height: "400px", borderRadius: "15px" }} />
+                <img src="files/out-there.jpg" alt="Image 1" style={{ width: "300px", height: "400px", borderRadius: "15px" }} />
+                <img src="files/out-there.jpg" alt="Image 1" style={{ width: "300px", height: "400px", borderRadius: "15px" }} />
+                <img src="files/out-there.jpg" alt="Image 1" style={{ width: "300px", height: "400px", borderRadius: "15px" }} />
+                <img src="files/out-there.jpg" alt="Image 1" style={{ width: "300px", height: "400px", borderRadius: "15px" }} /> */}
+            </Carousel>
         </>
     );
 }

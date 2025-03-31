@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import { motion } from 'motion/react';
 
 export function SplitLetter({ children, ...rest }) {
@@ -35,13 +35,13 @@ export function SplitLetter({ children, ...rest }) {
                         }}
                         exit={{
                             y: "-10%",
-                            scale: 0,
+                            scale: .9,
                             opacity: 0,
                             rotateX: -10,
                             transition: {
                                 delay: i * 0.05,
                                 type: "spring",
-                                duration: .4,
+                                duration: .2,
                                 bounce: 0.1 // (0 = no bounce, 1 = full bounce)
                             }
                         }}

@@ -19,7 +19,13 @@ const Footer = () => {
 
     return (
         <motion.footer ref={container}>
-            <motion.a whileInView={{ scale: 1.4, transition: { type: "spring" } }} className="email-link" href="mailto:aym1@mail.com">Write me</motion.a>
+            <motion.a
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1.4, transition: { type: "spring" } }}
+                className="email-link"
+                href="mailto:aym1@mail.com">
+                Write me
+            </motion.a>
 
             <motion.h5 style={{
                 y: parallax,
@@ -32,7 +38,9 @@ const Footer = () => {
                 transformOrigin: "50% 50%",
                 margin: "0 auto"
             }}
-            >Get in touch</motion.h5>
+            >
+                Project<br />in mind?
+            </motion.h5>
 
             <span className="copyright">&copy; 2025</span>
 
