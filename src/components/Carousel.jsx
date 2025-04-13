@@ -1,17 +1,17 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, LayoutGroup } from "motion/react";
 
 const images = [
     "../files/out-there.jpg",
     "../files/space.png",
-    "../files/out-there.jpg",
-    "../files/out-there.jpg",
+    "../files/ui.png",
+    "../files/manuel-weber-min.jpg",
     "../files/out-there.jpg",
 ];
 
-const AUTO_PLAY_INTERVAL = 3000; // 3 seconds
+const AUTO_PLAY_INTERVAL = 6000; // 3 seconds
 
 const Carousel = () => {
     const [index, setIndex] = useState(1); // Start at the first real slide
@@ -77,22 +77,36 @@ const Carousel = () => {
                 </AnimatePresence>
             </div>
 
-            <button style={styles.nextbutton} onClick={nextSlide}>next ›</button>
-            <button style={styles.prevbutton} onClick={prevSlide}>‹ Prev</button>
+            <motion.button
+                whileHover={{ x: 20 }}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0 }} style={styles.nextbutton} onClick={nextSlide}>Next</motion.button>
+            <motion.button
+                whileHover={{ x: -20 }}
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0 }} style={styles.prevbutton} onClick={prevSlide}>Prev</motion.button>
 
             {/* Indicators */}
-            <div style={styles.indicators}>
-                {images.map((_, i) => (
-                    <motion.div
-                        key={i}
-                        style={{
-                            ...styles.dot,
-                            backgroundColor: index === i + 1 ? "#fff" : "#555",
-                            width: index === i + 1 ? "30px" : "12px",
-                        }}
-                    />
-                ))}
-            </div>
+            <LayoutGroup>
+                <motion.div layout style={styles.indicators}>
+                    {images.map((_, i) => (
+                        <motion.div
+                            key={i}
+                            // layoutId="indication"
+                            transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+                            style={{
+                                ...styles.dot,
+                                transition: "1s",
+                                borderRadius: "30px",
+                                backgroundColor: index === i + 1 ? "#fff" : "#555",
+                                width: index === i + 1 ? "60px" : "12px",
+                            }}
+                        />
+                    ))}
+                </motion.div>
+            </LayoutGroup>
         </div>
     );
 };

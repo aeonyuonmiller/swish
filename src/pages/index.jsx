@@ -4,6 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Transition from "../components/Transition";
 import Hero from "../components/Hero";
+import ModalWrapper from "../components/Modal/ModalWrapper";
 
 export default function Home() {
   // Scroll Anim
@@ -32,8 +33,12 @@ export default function Home() {
         </motion.div>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
         <Link href="/services">Services</Link>
+        <ModalWrapper />
+        <ModalWrapper />
 
         <h2>Headline 2</h2>
+        <ModalWrapper />
+
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
       </Transition>
 
