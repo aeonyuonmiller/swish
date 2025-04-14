@@ -60,7 +60,7 @@ function AccordionItem({ id, header, content, mode, groupName }) {
             <AnimatePresence sync="wait" initial={false}>
                 <motion.div
                     className="content"
-                    style={{ display: 'none', padding: '0 16px 10px 16px', overflow: 'hidden' }}
+                    style={{ display: 'none', padding: '0 16px 10px 16px', overflow: 'clip' }}
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}

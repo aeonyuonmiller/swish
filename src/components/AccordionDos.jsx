@@ -17,13 +17,13 @@ function AccordionItem({ header, content }) {
             }}
         >
             <AnimatePresence sync="wait">
-                <motion.h3
+                <motion.h5
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     layout
                 >
                     {header}
-                </motion.h3>
+                </motion.h5>
                 <LayoutGroup>
                     {isOpen && (
                         <motion.div

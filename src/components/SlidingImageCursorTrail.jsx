@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -93,14 +93,16 @@ const SlidingImageCursorTrail = ({ children }) => {
                 {children}
             </HiddenMedias>
 
-            <h2>Move mouse</h2>
+            <Container>
+                <Title>Move mouse</Title>
+            </Container>
 
             <AnimatePresence>
                 {mediaItems.map(({ id, src, x, y, xOffset, yOffset, rotation }) => (
                     <motion.img
                         key={id}
                         src={src}
-                        style={{ width: '25vh', height: '25vh', borderRadius: 30 }}
+                        style={{ width: '25vh', height: '25vh' }}
                         initial={{
                             x,
                             y,
@@ -120,8 +122,8 @@ const SlidingImageCursorTrail = ({ children }) => {
                             scaleY: 1,
                             opacity: 1,
                             transition: {
-                                scaleX: { duration: 0.6, ease: [0.68, -0.55, 0.27, 1.55] },
-                                scaleY: { duration: 0.6, ease: [0.68, -0.55, 0.27, 1.55] },
+                                scaleX: { duration: 0.6, bounce: 1 },
+                                scaleY: { duration: 0.6, bounce: 1 },
                                 x: { duration: 1, bounce: 2 },
                                 y: { duration: 1, bounce: 2 },
                             },
@@ -142,7 +144,7 @@ const SlidingImageCursorTrail = ({ children }) => {
 };
 
 const Section = styled.section`
-  height: 100vh;
+  height: 150vh;
   overflow: hidden;
   position: relative;
   width: 100vw;
@@ -177,7 +179,6 @@ const Header = styled.div`
 
 const Title = styled.h1`
   text-align: center;
-  text-transform: uppercase;
   font: 400 italic 9vw / 0.76 'Instrument Serif', serif;
   letter-spacing: -0.05em;
   width: 56%;
@@ -194,8 +195,8 @@ const HiddenMedias = styled.div`
   display: none;
 
   img {
-    width: 1px;
-    height: 1px;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     position: absolute;
@@ -209,7 +210,6 @@ const CursorImage = styled.img`
   height: 15vw;
   position: absolute;
   object-fit: cover;
-  border-radius: 4%;
   z-index: 5;
 `;
 

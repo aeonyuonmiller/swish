@@ -50,14 +50,14 @@ export default function Services() {
                 <h2>Headline 2</h2>
                 <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
 
-                <AccordionTres
+                {/* <AccordionTres
                     items={[
                         { header: 'First', content: 'First content' },
                         { header: 'Second', content: 'Second content' },
                         { header: 'Third', content: 'Third content' },
                     ]}
                     mode="radio" // or "checkbox"
-                />
+                /> */}
 
                 <h3>Headline 3</h3>
                 <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>

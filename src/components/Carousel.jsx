@@ -95,7 +95,7 @@ const Carousel = () => {
                         <motion.div
                             key={i}
                             // layoutId="indication"
-                            transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+                            transition={{ type: "spring", duration: .4, bounce: 0.8 }}
                             style={{
                                 ...styles.dot,
                                 transition: "1s",

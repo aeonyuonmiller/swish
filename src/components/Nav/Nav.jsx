@@ -34,14 +34,15 @@ const LogoButton = styled(Link)`
   align-items: center;
   text-decoration: none;
   background: none;
-
   &:hover {
     background: none;
-    transition: all ease .2s;
   }
-
+  & svg {
+    fill: #ffe;
+  }
   &:hover svg{
-    fill: #a3fb7d;
+    fill: #00000080;
+    transition: all ease .4s;
   }
 `;
 
@@ -50,13 +51,13 @@ const NavLink = styled(Link)`
   font-size: 14px;
   letter-spacing: 0.05em;
   color: #fff;
-  background: #00000010;
+  background: #00000004;
   text-decoration: none;
-  transition: opacity 0.4s ease;
+  transition: all 0.4s ease;
 
   &:hover {
-    opacity: 0.7;
-    background: whitesmoke;
+    color: #fff;
+    background: #00000080;
     transition: all 0.4s ease;
 }
 `;
