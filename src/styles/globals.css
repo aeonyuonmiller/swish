@@ -164,6 +164,7 @@ small {
 
 a {
   padding: 1rem 1.2rem;
+  margin-bottom: 3rem;
   border-radius: 3rem;
   max-width: fit-content;
   color: var(--background);

@@ -33,18 +33,15 @@ export default function Home() {
         </motion.div>
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
         <Link href="/services">Services</Link>
-        <ModalWrapper />
-        <ModalWrapper />
+
+        <ModalWrapper>
+          <h4>Okeyyyy</h4>
+          <p>hopefully this works?</p>
+        </ModalWrapper>
 
         <h2>Headline 2</h2>
-        <ModalWrapper />
-
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
       </Transition>
-
-      <section className="sticky">
-        <div className="stick">okokok kokok</div>
-      </section>
 
       <Transition>
         <div>
