@@ -78,11 +78,15 @@ const Carousel = () => {
             </div>
 
             <motion.button
+                tabindex="0"
+                aria-label="Next Slide"
                 whileHover={{ x: 20 }}
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }} style={styles.nextbutton} onClick={nextSlide}>Next</motion.button>
             <motion.button
+                tabindex="0"
+                aria-label="Previous Slide"
                 whileHover={{ x: -20 }}
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}

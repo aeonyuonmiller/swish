@@ -25,7 +25,7 @@ export default function Hero({ title, image }) {
                         style={{ y: parallax, transformOrigin: "50% 50%", left: 0 }}
                         initial={{ scale: 1, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        exit={{ scale: 1.02, opacity: 0 }}
+                        exit={{ scale: 1.02, opacity: 0, transition: { delay: .2 } }}
                         src={image}
                         alt="whatever"
                         className="bg-image"
@@ -57,8 +57,8 @@ export default function Hero({ title, image }) {
                         <motion.span
                             key={index}
                             variants={{
-                                hidden: { opacity: 0, y: 10 },
-                                visible: { opacity: 1, y: 0, transition: { duration: 0.2 } }
+                                hidden: { opacity: 0, y: 50 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.4 } }
                             }}
                         >
                             <img src={icon} alt="file icon" />
@@ -91,7 +91,7 @@ function StyleSheet() {
             padding: 39vh 0 4vh 0;
             height: 150vh;
             width: 100vw;
-            background-color: #000;
+            background-color: whitesmoke;
             color: whitesmoke;
             overflow: hidden;
         }
@@ -99,21 +99,27 @@ function StyleSheet() {
         .details {
             position: absolute;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
+            align-items: center;
             width: 80%;
             bottom: 10%;
             padding: 2em 0 0 2em;
             border-radius: 30px; 
             gap: 2em;
-            color: whitesmoke;
-            background: #0000003a;
-            border-bottom: 1px solid #00000082;
+            color: black;
         }
         
         .details span{
             min-width: 8em;
             display: grid;
             place-items: center;
+            background: white;
+            border-radius: 30px;
+            padding: 2rem;
+        }
+        .details span img{
+            fill: black;
+            mix-blend-mode: difference;
         }
 
         h6 {
@@ -141,10 +147,6 @@ function StyleSheet() {
 
             span img{
                 display: none;
-            }
-
-            .hero-wrapper{
-                background-color: #579b82;
             }
         }
     `}</style>

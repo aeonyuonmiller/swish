@@ -5,6 +5,8 @@ import Link from "next/link";
 import Transition from "../components/Transition";
 import Hero from "../components/Hero";
 import ModalWrapper from "../components/Modal/ModalWrapper";
+import CustomYouTubePlayer from "../components/CustomYouTubePlayer";
+import InfiniteDraggableCarousel from "../components/InfiniteDraggableCarousel"
 
 export default function Home() {
   // Scroll Anim
@@ -26,6 +28,8 @@ export default function Home() {
       </Head>
 
       <Hero title="hello" image="files/out-there.jpg" />
+
+      {/* <CustomYouTubePlayer /> */}
 
       <Transition ref={container}>
         <motion.div style={{ y: parallax, transformOrigin: "0% 50%", marginTop: "20vh" }}>
@@ -54,39 +58,6 @@ export default function Home() {
         <p>Google Fonts makes it easy to bring personality and performance to your websites and products. Our robust catalog of open-source fonts and icons makes it easy to integrate expressive type and icons seamlessly — no matter where you are in the world.</p>
       </Transition>
 
-      {/* <section className="sticky">
-        <div className="slider">
-          <div className="slides">
-            <div className="slide">
-              <div className="img"><img src="space.png" alt="" /></div>
-              <div className="copy">
-                <h2>Title</h2>
-              </div>
-            </div>
-
-            <div className="slide">
-              <div className="img"><img src="space.png" alt="" /></div>
-              <div className="copy">
-                <h2>Title</h2>
-              </div>
-            </div>
-
-            <div className="slide">
-              <div className="img"><img src="space.png" alt="" /></div>
-              <div className="copy">
-                <h2>Title</h2>
-              </div>
-            </div>
-
-            <div className="slide">
-              <div className="img"><img src="space.png" alt="" /></div>
-              <div className="copy">
-                <h2>Title</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 }

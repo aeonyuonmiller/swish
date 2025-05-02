@@ -90,7 +90,11 @@ const SlidingImageCursorTrail = ({ children }) => {
     return (
         <Section ref={rootRef}>
             <HiddenMedias>
-                {children}
+                <img src="./files/out-there.jpg" alt="what" key="media-1" />
+                <img src="./files/space.png" alt="what" key="media-2" />
+                <img src="files/out-there.jpg" alt="what" key="media-3" />
+                <img src="files/space.png" alt="what" key="media-4" />
+                <img src="files/out-there.jpg" alt="what" key="media-5" />
             </HiddenMedias>
 
             <Container>

@@ -67,13 +67,8 @@ export default function Services() {
 
             </Transition>
 
-            <SlidingImageCursorTrail>
-                <img src="files/out-there.jpg" alt="what" key="1" />
-                <img src="files/space.png" alt="what" key="2" />
-                <img src="files/out-there.jpg" alt="what" key="3" />
-                <img src="files/space.png" alt="what" key="4" />
-                <img src="files/out-there.jpg" alt="what" key="5" />
-            </SlidingImageCursorTrail>
+            <SlidingImageCursorTrail />
+
 
             <Carousel>
                 {/* <img src="files/out-there.jpg" alt="Image 1" style={{ width: "300px", height: "400px", borderRadius: "15px" }} />*/}

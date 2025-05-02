@@ -30,13 +30,21 @@ const ModalCard = styled(motion.div)`
   }
 `;
 
+const CloseWrapper = styled.div`
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 2rem;
+    transform: translate3d(0, -200%, 0);
+    /* margin: 0; */
+`;
+
 const CloseButton = styled(motion.button)`
     /* position: relative; */
-    top: 30px;
-    transform: translate3d(-50%, -50%, 0);
+    /* top: 30px; */
     /* left: calc(100% - 45px); */
     margin: 0;
-    margin-left: auto;
+    /* margin-left: auto; */
     /* left: 100px; */
     background: #333;
     color: white;
@@ -44,7 +52,7 @@ const CloseButton = styled(motion.button)`
     border-radius: .5rem;
     padding: 1.5rem;
     width: fit-content;
-    /* height: 60px; */
+    height: 60px;
     cursor: pointer;
     font-size: 18px;
     line-height: 1;
@@ -65,23 +73,25 @@ const CloseButton = styled(motion.button)`
 `;
 
 const Modal = ({ onClose, children }) => {
-    return <Overlay
-        onClick={onClose}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0, transition: { delay: .2, duration: .5 } }}
+  return <Overlay
+    onClick={onClose}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0, transition: { delay: .2, duration: .5 } }}
+  >
+    <ModalCard
+      onClick={(e) => e.stopPropagation()}
+      initial={{ scaleY: 0.1, scale: 0, y: "100%" }}
+      animate={{ scaleY: 1, scale: 1, y: 0 }}
+      exit={{ y: "300%", scale: 0 }}
+      transition={{ type: "spring", stiffness: 400, damping: 20 }}
     >
-        <ModalCard
-            onClick={(e) => e.stopPropagation()}
-            initial={{ scaleY: 0.1, y: "100%" }}
-            animate={{ scaleY: 1, y: 0 }}
-            exit={{ y: "300%" }}
-            transition={{ type: "spring", stiffness: 400, damping: 25 }}
-        >
-            <CloseButton onClick={onClose}>Close</CloseButton>
+      <CloseWrapper>
+        <CloseButton onClick={onClose}>Close</CloseButton>
+      </CloseWrapper>
 
-            {children}
-        </ModalCard >
-    </Overlay >
+      {children}
+    </ModalCard >
+  </Overlay >
 }
 export default Modal;
