@@ -19,13 +19,13 @@ content:
     type: file
     fields:
       - name: title
-        label: Title
+        label: Titel
         type: string
       - name: image
-        label: Image
+        label: Motiv
         type: file
       - name: body
-        label: Body
+        label: Text
         type: rich-text 
   - name: articles
     label: Articles
