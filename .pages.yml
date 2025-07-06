@@ -3,7 +3,7 @@ media:
   output: /files
 content:
   - name: index
-    label: Index
+    label: Startseite
     path: public/content/index.mdx
     type: file
     fields:
