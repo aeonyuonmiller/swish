@@ -44,3 +44,14 @@ content:
       - name: body
         label: Body
         type: rich-text
+components:
+  alt-image:
+    label: Image with ALT text
+    type: object
+    fields:
+      - name: src
+        label: Image
+        type: image
+      - name: alt
+        label: ALT text
+        type: string
