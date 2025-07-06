@@ -28,7 +28,7 @@ content:
         label: Text
         type: rich-text 
   - name: articles
-    label: Articles
+    label: Blog
     path: content/articles
     type: collection
     fields:
