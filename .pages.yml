@@ -14,7 +14,7 @@ content:
         label: Body
         type: rich-text
   - name: about
-    label: About
+    label: Über mich
     path: content/about.mdx
     type: file
     fields:
